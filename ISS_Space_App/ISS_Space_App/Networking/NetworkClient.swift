@@ -54,7 +54,7 @@ public final class NetworkClient {
                 let data = data,
                 let jsonObject = try? JSONSerialization.jsonObject(with: data),
                 let jsonPayload = jsonObject as? [String : Any],
-                let requestData = jsonPayload["request"] as? [String : Any],
+                let _ = jsonPayload["request"] as? [String : Any],
                 let responseArray = jsonPayload["response"] as? [[String: Any]] else {
                     if let error = error {
                         failure(NetworkError(error: error))
@@ -64,7 +64,7 @@ public final class NetworkClient {
                     return
             }
         
-            let stations = Stations.array(requestDict: requestData, responseArray: responseArray)
+            let stations = Stations.array(responseArray: responseArray)
             success(stations)
         }
         

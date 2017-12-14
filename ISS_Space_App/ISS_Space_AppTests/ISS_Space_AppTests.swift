@@ -11,19 +11,43 @@ import XCTest
 
 class ISS_Space_AppTests: XCTestCase {
     
+    var sessionUnderTest: URLSession!
+
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sessionUnderTest = URLSession(configuration: URLSessionConfiguration.default)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sessionUnderTest = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidCallToiTunesGetsHTTPStatusCode200() {
+        // given Stubbed Long and Lat
+        let url = URL(string: "http://api.open-notify.org/iss-pass.json?lat=40.76268&lon=73.97855")
+        // 1
+        let promise = expectation(description: "Status code: 200")
+        
+        // when
+        let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+            // then
+            if let error = error {
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+            } else if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                if statusCode == 200 {
+                    // 2
+                    promise.fulfill()
+                } else {
+                    XCTFail("Status code: \(statusCode)")
+                }
+            }
+        }
+        dataTask.resume()
+        // 3
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     func testPerformanceExample() {

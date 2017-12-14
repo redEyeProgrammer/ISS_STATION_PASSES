@@ -17,8 +17,8 @@ public final class Stations {
         //        static let altitude =  "altitude"
         //        static let datetime =  "datetime"
         //        static let latitude =  "latitude"
-        //        static let longitude = "longitude"
-        //        static let passes =    "passes"
+        //static let longitude = "longitude"
+       //static let passes =    "passes"
         static let duration =  "duration"
         static let risetime =  "risetime"
         
@@ -27,6 +27,7 @@ public final class Stations {
     // MARK: - Instance Properties
     public let duration: Int?
     public let risetime: Int?
+    public var passes: Int?
     
     
     // MARK: - Object Lifecycle
@@ -39,11 +40,12 @@ public final class Stations {
         }
         self.duration = duration
         self.risetime = risetime
-        
-        
     }
     
-    public class func array(requestDict: [String: Any], responseArray: [[String : Any]]) -> [Stations] {
+
+
+    public class func array(responseArray: [[String : Any]]) -> [Stations] {
+        
         var array: [Stations] = []
         for json in responseArray {
             guard let stations = Stations(json: json) else { continue }
