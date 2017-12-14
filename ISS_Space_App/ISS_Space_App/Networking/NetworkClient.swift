@@ -45,8 +45,7 @@ public final class NetworkClient {
             DispatchQueue.main.async { _failure (error) }
         }
         
-        //let url = baseURL.appendingPathComponent("/iss-pass.json?lat=\(latitue)&lon=\(longitude)")
-        let url = URL(string: "http://api.open-notify.org/iss-pass.json?lat=40.76268&lon=-73.97855")
+        let url = URL(string: String(describing: self.baseURL) + "/iss-pass.json?lat=\(latitue)&lon=\(longitude)")
         
         let task = session.dataTask(with: url!) { (data, response, error) in
             
@@ -64,14 +63,12 @@ public final class NetworkClient {
                     }
                     return
             }
-            
-
+        
             let stations = Stations.array(requestDict: requestData, responseArray: responseArray)
             success(stations)
         }
         
         task.resume()
-        
         
     }
 }

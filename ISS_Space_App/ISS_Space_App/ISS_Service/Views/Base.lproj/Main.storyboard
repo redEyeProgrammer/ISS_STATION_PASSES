@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--ISS_SPACE_STATION-->
         <scene sceneID="3ML-Vh-bW3">
             <objects>
                 <viewController id="8Xq-ah-AWj" customClass="HomeViewController" customModule="ISS_Space_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Z2h-mp-duG">
-                                <rect key="frame" x="54.5" y="250.5" width="266" height="166"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6iw-ll-6eV">
+                                <rect key="frame" x="54.5" y="213.5" width="266" height="240"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rke-ga-DGL">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="30"/>
@@ -34,7 +34,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wTw-nU-Xfo">
-                                        <rect key="frame" x="0.0" y="68" width="266" height="30"/>
+                                        <rect key="frame" x="0.0" y="70" width="266" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ghw-ca-FhS"/>
                                         </constraints>
@@ -46,7 +46,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQW-cQ-AXm">
-                                        <rect key="frame" x="0.0" y="136" width="266" height="30"/>
+                                        <rect key="frame" x="0.0" y="140" width="266" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="gEA-ue-nSq"/>
                                         </constraints>
@@ -55,24 +55,33 @@
                                             <action selector="btnSearch:" destination="8Xq-ah-AWj" eventType="touchUpInside" id="Bu0-S5-OrA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6f-e4-1rd">
+                                        <rect key="frame" x="0.0" y="210" width="266" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Hgp-Pl-wHH"/>
+                                        </constraints>
+                                        <state key="normal" title="Use Current Location"/>
+                                        <connections>
+                                            <action selector="currentLocationButton:" destination="8Xq-ah-AWj" eventType="touchUpInside" id="lFX-Kz-08e"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="5l5-B8-g1K"/>
-                                    <constraint firstAttribute="width" constant="266" id="7oW-y3-oNm"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Z2h-mp-duG" firstAttribute="centerX" secondItem="Xap-7u-Xir" secondAttribute="centerX" id="q9h-CU-ABc"/>
-                            <constraint firstItem="Z2h-mp-duG" firstAttribute="leading" secondItem="g99-86-j6Y" secondAttribute="leading" constant="54.5" id="qlK-W0-Fe8"/>
-                            <constraint firstItem="g99-86-j6Y" firstAttribute="trailing" secondItem="Z2h-mp-duG" secondAttribute="trailing" constant="54.5" id="qwQ-TZ-f2p"/>
-                            <constraint firstItem="Z2h-mp-duG" firstAttribute="centerY" secondItem="Xap-7u-Xir" secondAttribute="centerY" id="rcq-mp-DCy"/>
+                            <constraint firstItem="6iw-ll-6eV" firstAttribute="centerY" secondItem="Xap-7u-Xir" secondAttribute="centerY" id="HIA-vg-zfw"/>
+                            <constraint firstItem="6iw-ll-6eV" firstAttribute="leading" secondItem="g99-86-j6Y" secondAttribute="leading" constant="54.5" id="Xl5-78-Dtm"/>
+                            <constraint firstItem="g99-86-j6Y" firstAttribute="trailing" secondItem="6iw-ll-6eV" secondAttribute="trailing" constant="54.5" id="cTF-fE-erp"/>
+                            <constraint firstItem="6iw-ll-6eV" firstAttribute="centerX" secondItem="Xap-7u-Xir" secondAttribute="centerX" id="u5L-Jx-nlZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g99-86-j6Y"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wKO-8r-RVw"/>
+                    <navigationItem key="navigationItem" title="ISS_SPACE_STATION" id="wKO-8r-RVw"/>
                     <connections>
+                        <outlet property="btnCurrentLocation" destination="E6f-e4-1rd" id="gop-85-qrt"/>
+                        <outlet property="txtLatitude" destination="rke-ga-DGL" id="xOu-en-5s3"/>
+                        <outlet property="txtLongitude" destination="wTw-nU-Xfo" id="8Uf-il-d2d"/>
                         <segue destination="zRp-JY-2yb" kind="show" identifier="stationTableSegue" id="xj9-e5-7RW"/>
                     </connections>
                 </viewController>

@@ -23,6 +23,25 @@ extension Int {
 //Mark: UIViewControllers
 extension UIViewController {
     
+    public func showToastWith(title titleText:String , message messageText:String , withAction actionArray:[UIAlertAction]? ,withPrefferedStyle:UIAlertControllerStyle = .alert) {
+        
+        let alert = UIAlertController(title: titleText, message: messageText, preferredStyle: withPrefferedStyle)
+        guard actionArray != nil else  {
+            alert.addAction(
+                UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    
+                }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        for action in actionArray! {
+            alert.addAction(action)
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     private struct AssociationKey {
         static var loadingHUD = "rw_loadingHUD"
     }
