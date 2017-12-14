@@ -14,11 +14,6 @@ public final class Stations {
     
     
     internal struct Keys {
-        //        static let altitude =  "altitude"
-        //        static let datetime =  "datetime"
-        //        static let latitude =  "latitude"
-        //static let longitude = "longitude"
-       //static let passes =    "passes"
         static let duration =  "duration"
         static let risetime =  "risetime"
         

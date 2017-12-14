@@ -22,6 +22,12 @@
 		8682F2941FE2D455004ABD6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86AA62E51FE1BE4D00788492 /* Info.plist */; };
 		8682F2951FE2D455004ABD6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86AA62E51FE1BE4D00788492 /* Info.plist */; };
 		8682F2961FE2D456004ABD6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86AA62E51FE1BE4D00788492 /* Info.plist */; };
+		8682F2981FE323AE004ABD6D /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8682F2971FE323AE004ABD6D /* Details.storyboard */; };
+		8682F2991FE323AE004ABD6D /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8682F2971FE323AE004ABD6D /* Details.storyboard */; };
+		8682F29A1FE323AE004ABD6D /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8682F2971FE323AE004ABD6D /* Details.storyboard */; };
+		8682F2A01FE32991004ABD6D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8682F29F1FE32991004ABD6D /* DetailsViewController.swift */; };
+		8682F2A11FE32991004ABD6D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8682F29F1FE32991004ABD6D /* DetailsViewController.swift */; };
+		8682F2A21FE32991004ABD6D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8682F29F1FE32991004ABD6D /* DetailsViewController.swift */; };
 		86AA62C11FE1BE4D00788492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AA62C01FE1BE4D00788492 /* AppDelegate.swift */; };
 		86AA62C61FE1BE4D00788492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AA62C41FE1BE4D00788492 /* Main.storyboard */; };
 		86AA62C91FE1BE4D00788492 /* ISS_Space_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86AA62C71FE1BE4D00788492 /* ISS_Space_App.xcdatamodeld */; };
@@ -72,6 +78,8 @@
 		8682F2851FE1DFDC004ABD6D /* StationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
 		8682F2891FE1E189004ABD6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8682F28D1FE1E24F004ABD6D /* StationsTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StationsTable.storyboard; sourceTree = "<group>"; };
+		8682F2971FE323AE004ABD6D /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
+		8682F29F1FE32991004ABD6D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		86AA62BD1FE1BE4D00788492 /* ISS_Space_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISS_Space_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AA62C01FE1BE4D00788492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86AA62C51FE1BE4D00788492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -224,6 +232,7 @@
 				86AA62FF1FE1C1BB00788492 /* LoadingHUD.xib */,
 				86AA62C41FE1BE4D00788492 /* Main.storyboard */,
 				8682F28D1FE1E24F004ABD6D /* StationsTable.storyboard */,
+				8682F2971FE323AE004ABD6D /* Details.storyboard */,
 				86AA62CC1FE1BE4D00788492 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -232,6 +241,7 @@
 		86AA62F91FE1BFFE00788492 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8682F29F1FE32991004ABD6D /* DetailsViewController.swift */,
 				8682F2851FE1DFDC004ABD6D /* StationsTableViewController.swift */,
 				8682F2891FE1E189004ABD6D /* HomeViewController.swift */,
 			);
@@ -368,6 +378,7 @@
 				86AA62CB1FE1BE4D00788492 /* Assets.xcassets in Resources */,
 				86AA63011FE1C1BB00788492 /* LoadingHUD.xib in Resources */,
 				86AA62C61FE1BE4D00788492 /* Main.storyboard in Resources */,
+				8682F2981FE323AE004ABD6D /* Details.storyboard in Resources */,
 				8682F2911FE2D44A004ABD6D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +390,7 @@
 				8682F2921FE2D44B004ABD6D /* Info.plist in Resources */,
 				8682F28F1FE1E24F004ABD6D /* StationsTable.storyboard in Resources */,
 				8682F2951FE2D455004ABD6D /* Info.plist in Resources */,
+				8682F2991FE323AE004ABD6D /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +401,7 @@
 				8682F2931FE2D44B004ABD6D /* Info.plist in Resources */,
 				8682F2901FE1E24F004ABD6D /* StationsTable.storyboard in Resources */,
 				8682F2961FE2D456004ABD6D /* Info.plist in Resources */,
+				8682F29A1FE323AE004ABD6D /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +415,7 @@
 				86AA62C91FE1BE4D00788492 /* ISS_Space_App.xcdatamodeld in Sources */,
 				86AA63051FE1C2DC00788492 /* NetworkClient.swift in Sources */,
 				86AA63001FE1C1BB00788492 /* LoadingHUD.swift in Sources */,
+				8682F2A01FE32991004ABD6D /* DetailsViewController.swift in Sources */,
 				86AA63091FE1C34D00788492 /* NetworkError.swift in Sources */,
 				86AA62C11FE1BE4D00788492 /* AppDelegate.swift in Sources */,
 				8682F28A1FE1E189004ABD6D /* HomeViewController.swift in Sources */,
@@ -425,6 +439,7 @@
 				86AA630E1FE1C45500788492 /* Stations.swift in Sources */,
 				86AA631E1FE1DB8700788492 /* LoadingHUD.swift in Sources */,
 				86AA63061FE1C2DC00788492 /* NetworkClient.swift in Sources */,
+				8682F2A11FE32991004ABD6D /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +456,7 @@
 				86AA630F1FE1C45500788492 /* Stations.swift in Sources */,
 				86AA631F1FE1DB8700788492 /* LoadingHUD.swift in Sources */,
 				86AA63071FE1C2DC00788492 /* NetworkClient.swift in Sources */,
+				8682F2A21FE32991004ABD6D /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

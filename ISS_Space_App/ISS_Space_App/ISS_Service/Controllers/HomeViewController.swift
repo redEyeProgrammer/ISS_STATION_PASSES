@@ -37,9 +37,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //If we have viable Long and Lat, enable Current Location Button
-        btnCurrentLocation.isEnabled = (locManager.location != nil) ? true : false
+    override func viewWillAppear(_ animated: Bool) {
+        txtLatitude.text = ""
+        txtLongitude.text = ""
     }
     
     @IBAction func currentLocationButton(_ sender: Any) {
@@ -74,6 +74,11 @@ class HomeViewController: UIViewController {
             tableViewController.latitude = latitudeLocation
             
         }
+    }
+    
+    //Unwind Segue
+    @IBAction func unwindToHomeVC(segue:UIStoryboardSegue) {
+        
     }
 }
 

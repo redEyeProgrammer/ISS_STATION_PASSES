@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ISS_Space_App/ISS_Service/Controllers/StationsTableViewController.swift"
-            timestampString = "534977258.346005"
+            filePath = "ISS_Space_App/ISS_Service/Controllers/DetailsViewController.swift"
+            timestampString = "534985009.052872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "loadPasses()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ISS_Space_App/ISS_Service/Controllers/StationsTableViewController.swift"
-            timestampString = "534977258.346201"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "loadPasses()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "loadDetails()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
